@@ -1,0 +1,245 @@
+
+
+.parent{
+ width: 80%;
+  height: 294px;
+  position: absolute;
+  top: 105px;
+  
+  padding: 32px;
+  box-sizing: border-box;
+  background-color:  #FFFFFF;
+  ;
+
+  left: 18%;
+}
+.head{
+ 
+   width: 80%;
+      height: 74px;
+      padding: 0 0 1px 0;
+      box-sizing: border-box;
+    
+}
+.edit{
+  width: 58px;
+  height: 40px;
+}
+/* .float-right {
+  float: right;
+  float: top;
+} */
+
+#button{
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.parentd{
+  left: 5;
+ width: 80%;
+  height: 114px;
+ 
+  position: absolute;
+}
+.card-text{
+  font-family: 'Inter';
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.card-text1 {
+  font-family: 'Inter';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.pet1{
+ 
+height: 323px;
+position: absolute;
+top: 350px;
+left: 0px;
+  background-color: #FFFFFF;
+} 
+.para{
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color:  #667085;
+  
+}
+.tit{
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #101828;
+  
+}
+.pet{
+ width: 30%;
+  height: 153px;
+  padding: 26px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 0 0 32px 0;
+}
+
+.element {
+  width: 115hug;
+  height: 42hug;
+  margin: 0 0 16px 0;
+}
+
+.element > * {
+  margin-top: 16px;
+}
+.petp{
+  font-family: Inter;
+font-size: 20px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: left;
+}
+.petdob{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.c{
+  border-color:  #FFFFFF;
+}
+.custom-popup-container {
+  width: 400px;
+  height: 621px;
+  top: 230px;
+  left: 890px;
+  padding: 24px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 0 0 32px 0;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+
+
+/* .popup-inner {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.cancel-btn {
+  margin-right: auto;
+}
+
+
+.popup {
+width: 450px;
+height: 680px;
+position: fixed;
+top: 130px;
+left: 700px;
+padding: 24px;
+border-radius: 12px;
+box-sizing: border-box;
+}
+
+
+.bt{
+
+  width: 352px;
+  height: 44px;
+  gap: 12px;
+  box-sizing: border-box; /* to include padding and border in the element's total width and height */
+
+}
+
+.can{
+width: Fill (170px);
+height: Hug (44px);
+padding: 10px, 18px, 10px, 18px;
+border-radius: 8px;
+border: 1px;
+gap: 8px;
+
+}
+
+.con{
+
+  /* fill the width of the parent container */
+  height: 44px;
+  padding: 10px 18px; /* shorthand for padding-top, padding-right, padding-bottom, padding-left */
+  border-radius: 8px;
+  border: 1px solid black; /* shorthand for border-width, border-style, border-color */
+  box-sizing: border-box; /* to include padding and border in the element's total width and height */
+  gap: 8px; /* if used in a container element */
+
+}
+
+
+
+.modal-body {
+height: 400px; /* adjust the height as needed */
+overflow-y: auto;
+}
+
+
+.modal-content{
+height: 550px; /* adjust the height as needed */
+
+overflow-y: auto;
+}
+
+.gender{
+width:350px;
+height: 52px;
+display: flex;
+
+align-items: center;
+gap: 20px;
+}
+
+.namegap{
+gap: 20px;
+}
+
+.popupforadd{
+width: 450px;
+height: 800px;
+position: absolute;
+top: 0px;
+left: 450px;
+padding: 24px;
+border-radius: 12px;
+}
+
+.len{
+height: 600px;
+overflow-y: auto;
+}

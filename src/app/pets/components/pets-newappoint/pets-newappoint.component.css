@@ -1,0 +1,97 @@
+
+
+.page{
+	margin-left: 10%;
+	margin-right: 10%;
+	height: 100%;
+}
+
+ #page-container {
+	position: absolute;
+	top: 70px;
+	left: 268px;
+	background-color: #f0f0f0;
+	padding: 20px;
+	width: 80%;
+	margin: 0 auto;
+	z-index: -1;
+}
+
+#heading {
+	color: #333;
+	text-align:left;
+}
+
+#form-container {
+	display: flex;
+	justify-content: space-between;
+}
+#Vet-details{
+	width: 45%;
+}
+#calendar {
+	width: 23%;
+}
+
+#patient-details {
+	width: 45%;
+	margin-top: 20px;
+}
+
+input, select, textarea {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+button {
+	background-color: #fff;
+	color: #000;
+	padding: 10px 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+	border-radius: 8px;
+	cursor: pointer;
+	
+}
+button.selected {
+	background-color: #a1a1a1;
+	color: black;
+  }
+
+
+#cancel-btn {
+	background-color: #fff;
+	color: #000;
+	padding: 10px 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#bookAppointment-btn {
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+
+}
+
+.popup {
+	width: 350px;
+	height: 750px;
+	position: fixed;
+	top: 300px;
+	left: 600px;
+	padding: 24px;
+	border-radius: 12px;
+	box-sizing: border-box;
+  }
+  

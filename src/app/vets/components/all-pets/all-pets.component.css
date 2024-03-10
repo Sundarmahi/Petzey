@@ -1,0 +1,18 @@
+#hed{
+    top: -50px;
+}
+hr {
+    margin: 1rem 0;
+    color: inherit;
+    border: 0;
+    border-top: var(--bs-border-width) solid;
+    opacity: .25;
+    position: relative;
+    left: 70px;
+    width: 1170px !important;
+}
+.card{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px 2px rgb(217 217 217 / 99%);
+}

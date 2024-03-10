@@ -1,0 +1,143 @@
+.header {
+    width: 100%;
+    height: 73px;
+    background-color: #ffffff;
+    padding: 15px, 80px, 0px, 80px;
+    float: inline-start;
+}
+ 
+.container {
+    width: 168px;
+    height: min-content;
+    display: flex;
+    float: right;
+    height: 48px;
+    margin-top: 15px;
+    margin-right: 30px;
+    justify-content: space-between;
+}
+ 
+.text {
+    width: 98px;
+    height: 48px
+}
+ 
+#vetname {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #000000;
+}
+ 
+#logout {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #98A2B3;
+}
+ 
+#image {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+    gap: 16px
+}
+ 
+.sidebar {
+    position: absolute;
+    width: 260px;
+    height: 250%;
+    padding: 16px, 0px, 1763px, 16px;
+    background-color: #18385C;
+}
+ 
+.menu {
+    width: 244px;
+    height: 181px;
+    margin-top: 30px;
+    margin-left: 16px;
+    gap: 8px;
+}
+ 
+.innerhtml{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+ 
+.menu-items {
+    width: 232px;
+    height: 55px;
+    padding: 6px;
+    border-radius: 10px, 0px, 0px, 10px;
+    gap: 16px;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+ 
+.menu-text{
+font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+line-height: 24px;
+letter-spacing: 0.02em;
+text-align: left;
+color: #ffffff;
+padding-left: 16px;
+}
+ 
+.mycard{
+    position: relative;
+    top: 210px;
+    left: 300px;
+    width: 1150px;
+}
+#hline{
+    position: relative;
+    width: 1100px;
+    top: 190px;
+    left: 300px;
+    border-width: 1px;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 2px;
+    background-color: #060606;
+ 
+ 
+}
+.rdetails{
+    position: relative;
+    right: 0px;
+}
+ 
+.con{
+    display: flex;
+      margin-top: 0px;
+      margin-left: 0px;
+      position: relative;
+      margin-right: 0px;
+      top: 250px;
+      left: 260px;
+      width: 1100px;
+   
+  }
+ 
+  .all{
+    width:  600px;
+    height: 938px;
+    top: 100px;
+    margin-right: 0px;
+    gap: 32px;
+    margin-top: 0px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    right: 0px;
+    left: 15px;
+  }

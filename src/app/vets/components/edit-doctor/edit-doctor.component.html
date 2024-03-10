@@ -1,0 +1,83 @@
+<div class="modal" style="width: 400px; height: 700px; padding: 24px; background: white; box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03); border: 2px solid black; border-radius: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 32px; display: inline-flex; margin-left: 550px; margin-top: 100px;">
+    <div style="align-self: stretch; height: 600px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 20px; display: flex">
+      <div style="align-self: stretch; height: 56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+        <div style="align-self: stretch; color: #101828; font-size: 18px; font-family: Inter; font-weight: 500; line-height: 28px; word-wrap: break-word">Edit Profile</div>
+        <div style="align-self: stretch; color: #667085; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 20px; word-wrap: break-word">Update account details</div>
+      </div>
+      <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
+        <div style="justify-content: flex-start; align-items: flex-start; gap: 32px; display: inline-flex">
+          <div style="width: 104px; height: 100px; position: relative">
+            <img style="width: 100px; height: 100px; left: 0px; top: 0px; position: absolute; background: linear-gradient(0deg, #DBC0DD 0%, #DBC0DD 100%); border-radius: 9999px" src="assets/images/Ellipse 1.svg" />
+            <div style="width: 34px; height: 34px; left: 70px; top: 66px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+              <div style="width: 34px; height: 34px; position: relative">
+                <input type="image" src="assets/images/cameraa.svg" style="width: 20px; height: 18px; left: 7px; top: 8px; position: absolute;" />
+              </div>
+            </div>
+          </div>
+          <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+            <div style="color: #667085; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Name</div>
+            <div style="height: 31px; position: relative">
+              <input type="text" placeholder="Gilmer" value="Gilmer" style="left: 0px; top: 0px; position: absolute; color: #4F4F4F; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word" [(ngModel)]="vetData.vetName"/>
+            </div>
+          </div>
+        </div>
+        <div style="height: 42px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+          <div style="color: #667085; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">NPI No.</div>
+          <div style="justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+            <div style="width: 295px; position: relative">
+              <input type="number" placeholder="809938915" value="809938915" style="left: 0px; top: 0px; position: absolute; color: #4F4F4F; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">
+            </div>
+          </div>
+        </div>
+        <div style="height: 42px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+          <div style="color: #667085; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Mobile</div>
+          <div style="justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+            <div style="width: 50px; height: 24px; position: relative">
+              <div style="width: 50px; height: 0px; left: 0px; top: 24px; position: absolute; opacity: 0.50; border: 1px #4F4F4F solid"></div>
+              <div style="width: 20px; height: 20px; padding-left: 5px; padding-right: 5px; left: 30px; top: 3px; position: absolute; justify-content: center; align-items: center; display: inline-flex">
+                <div style="width: 10px; height: 5px; border: 1.67px #344054 solid"></div>
+              </div>
+              <input type="tel" placeholder="+41" value="+41" style="left: 0px; top: 0px; position: absolute; color: #4F4F4F; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word; width: 50px">
+            </div>
+            <div style="width: 236px; position: relative">
+              <input type="number" placeholder="9898989898" value="9898989898" style="left: 0px; top: -25px; position: absolute; color: #4F4F4F; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word" [(ngModel)]="vetData.mobileNo" />
+            </div>
+          </div>
+        </div>
+        <div style="height: 42px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+          <div style="color: #667085; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Email</div>
+          <div style="justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+            <div style="width: 292px; position: relative">
+              <input type="email" placeholder="gilmer2407@gmail.com" value="gilmer2407@gmail.com" style="left: 0px; top: 0px; position: absolute; color: #4F4F4F; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word" [(ngModel)]="vetData.email"/>
+            </div>
+          </div>
+        </div>
+        <div style="height: 42px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+          <div style="color: #667085; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Speciality</div>
+          <div style="justify-content: flex-start; align-items: flex-end; gap: 8px; display: inline-flex">
+            <div style="width: 295px; position: relative">
+              <input type="text" placeholder="NAVLE" value="NAVLE" style="left: 0px; top: 0px; position: absolute; color: #4F4F4F; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word" [(ngModel)]="vetData.speciality"/>
+            </div>
+          </div>
+        </div>
+        <div style="width: 352px; height: 50px; position: relative">
+          <div style="width: 151px; height: 17px; left: 0px; top: 0px; position: absolute; color: #667085; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word">Clinic Address</div>
+          <input type="text" placeholder="clinic, washington, USA" value="clinic, washington, USA" style="width: 352px; height: 50px; left: 3px; top: 31px; position: absolute; color: #4F4F4F; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word" [(ngModel)]="clinic.clinicLocation"/>
+        </div>
+      </div>
+    </div>
+    <div style="align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 12px; display: inline-flex">
+      <div style="flex: 1 1 0; height: 30px; border-radius: 8px; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div style="flex: 1 1 0; height: 30px; padding-left: 18px; padding-right: 18px; padding-top: 10px; padding-bottom: 10px; background: white; box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-radius: 8px; overflow: hidden; border: 1px #D0D5DD solid; justify-content: center; align-items: center; gap: 8px; display: flex">
+          <button class="btn btn-light" style="color: #344054; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word" routerLink="/dashboard/profilevet">Cancel</button>
+        </div>
+      </div>
+      <div style="flex: 1 1 0; height: 30px; border-radius: 8px; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div style="flex: 1 1 0; height: 30px; padding-left: 18px; padding-right: 18px; padding-top: 10px; padding-bottom: 10px; background: #E62E05; box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05); border-radius: 8px; overflow: hidden; border: 1px #E62E05 solid; justify-content: center; align-items: center; gap: 8px; display: flex">
+          <button class="btn btn-danger" style="color: white; font-size: 16px; font-family: Inter; font-weight: 500; line-height: 24px; word-wrap: break-word" (click)="getVet()">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>

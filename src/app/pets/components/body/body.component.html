@@ -1,0 +1,407 @@
+
+
+<div class="heder2">
+  <div>
+    <a class="allappointments">All Appointments</a>
+  </div>
+  <div class="filterbar">
+    <select
+      class="status custom-select"
+      name="Status"
+      id="Status"
+      (change)="getSelectedOption($event)"
+    >
+      <option value="" disabled selected>Status</option>
+      <option value="ALL">All</option>
+      <option class="status" value="CLOSED">Closed</option>
+      <option class="status" value="CONFIRMED">Confirmed</option>
+      <option class="status" value="CANCELLED">Cancelled</option>
+    </select>
+    <a routerLink="/pets/newappointment">
+    <button class="newAppointmentbtn">
+      + New Appointment
+    </button>
+    </a>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="containercard">
+    <div *ngFor="let card of getPaginatedCards()">
+      <div class="displaycard">
+        <div class="info">
+          <div class="cardupper">
+            <div>
+              <!-- [src]="card.imgUrl" -->
+              <img
+                class="cardimg"
+                src="../../../../assets/images/Ellipse 1 (1).png"
+              />
+              <!-- <p>vet:{{getVetById(card.vetId).vetName}}</p> -->
+            </div>
+            <div class="carduppertext">
+              <!-- [ngOnInit]="getPetData(card.petId)" -->
+              <div class="nameinfo">
+                 <!-- <a class="name">{{ getVetById(card.vetId).}}</a>  -->
+                 <span class=""
+                 >vet:{{ getVetById(card.vetId)?.vetName}}</span >
+               
+                <br />
+              </div>
+              
+               <span class="owner"
+                >Pet:{{ getPetById(card.petId)?.petName}}</span> 
+                
+            </div>
+          </div>
+          <div class="lowercard">
+            <div>
+              <a class="time">{{ card.appointment_time | slice : 0 : 5 }}</a>
+              <br />
+              <a class="date">{{
+                card.appointmentDate | date : "dd/MM/yyyy"
+              }}</a>
+            </div>
+            <div class="icons">
+              <a routerLink="/chat/{card.petParentId}" class="chat">
+                <img src="../../assets/images/ic_comment_24px.png" alt="send"
+              /></a>
+              <!-- <a href="" class="chat"> <img src="../../assets/images/ic_comment_24px.png" alt=""></a> -->
+              <a href="" class="call">
+                <img src="../../assets/images/Frame (1).png" alt=""
+              /></a>
+              <a href="" class="videocall">
+                <img src="../../assets/images/Frame.png" alt=""
+              /></a>
+            </div>
+          </div>
+        </div>
+        <div class="bottomelements">
+          <div class="details">
+            <a
+              class="detailstext"
+              (click)="
+                navigate(
+                  card.appointmentId,
+                  card.vetId,
+                  card.petParentId,
+                  card.petId
+                )
+              "
+              
+              ngModel="{{ card.appointmentId }}"
+              >Details</a
+            >
+            <a
+              type="button"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal2"
+              id="bookAppointment-btn"
+              class="detailstext"
+              routerLink="/feedback/{card.vet.id}"
+              >Feedback</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagination p5">
+    <ul>
+      <a (click)="goToFirstPage()">
+        <li></li>
+      </a>
+      <a (click)="previousPage()">
+        <li></li>
+      </a>
+      <a (click)="nextPage()">
+        <li></li>
+      </a>
+      <a (click)="goToLastPage()">
+        <li></li>
+      </a>
+    </ul>
+  </div>
+</div>
+
+<!-- feedback popup -->
+
+<div
+  class="modal fade"
+  id="exampleModal2"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-content modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Feedback Form</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-content modal-body">
+        <form id="feedbackForm" (submit)="onSubmit()">
+          <div class="form-group">
+            <label for="competence"
+              >1. How satisfied are you with the competence of the
+              doctor?</label
+            >
+            <ul class="rating">
+              <li>
+                <input
+                  id="doctorCompetenceRating"
+                  type="radio"
+                  name="doctorCompetenceRating"
+                  value="1"
+                  [(ngModel)]="feedback.doctorCompetenceRating"
+                />
+                <label for="doctorCompetenceRating">1</label>
+              </li>
+              <li>
+                <input
+                  id="doctorCompetenceRating"
+                  type="radio"
+                  name="doctorCompetenceRating"
+                  value="2"
+                  [(ngModel)]="feedback.doctorCompetenceRating"
+                />
+                <label for="doctorCompetenceRating">2</label>
+              </li>
+              <li>
+                <input
+                  id="doctorCompetenceRating"
+                  type="radio"
+                  name="doctorCompetenceRating"
+                  value="3"
+                  [(ngModel)]="feedback.doctorCompetenceRating"
+                />
+                <label for="doctorCompetenceRating">3</label>
+              </li>
+              <li>
+                <input
+                  id="doctorCompetenceRating"
+                  type="radio"
+                  name="doctorCompetenceRating"
+                  value="4"
+                  [(ngModel)]="feedback.doctorCompetenceRating"
+                />
+                <label for="doctorCompetenceRating">4</label>
+              </li>
+              <li>
+                <input
+                  id="doctorCompetenceRating"
+                  type="radio"
+                  name="doctorCompetenceRating"
+                  value="5"
+                  [(ngModel)]="feedback.doctorCompetenceRating"
+                />
+                <label for="doctorCompetenceRating">5</label>
+              </li>
+            </ul>
+            <label for="treatmentOutcomeRating"
+              >2. How satisfied are you with the outcome of treatment?</label
+            >
+            <ul class="rating">
+              <li>
+                <input
+                  id="treatmentOutcomeRating"
+                  type="radio"
+                  name="treatmentOutcomeRating"
+                  value="1"
+                  [(ngModel)]="feedback.treatmentOutcomeRating"
+                />
+                <label for="treatmentOutcomeRating">1</label>
+              </li>
+              <li>
+                <input
+                  id="treatmentOutcomeRating"
+                  type="radio"
+                  name="treatmentOutcomeRating"
+                  value="2"
+                  [(ngModel)]="feedback.treatmentOutcomeRating"
+                />
+                <label for="treatmentOutcomeRating">2</label>
+              </li>
+              <li>
+                <input
+                  id="treatmentOutcomeRating"
+                  type="radio"
+                  name="treatmentOutcomeRating"
+                  value="3"
+                  [(ngModel)]="feedback.treatmentOutcomeRating"
+                />
+                <label for="treatmentOutcomeRating">3</label>
+              </li>
+              <li>
+                <input
+                  id="treatmentOutcomeRating"
+                  type="radio"
+                  name="treatmentOutcomeRating"
+                  value="4"
+                  [(ngModel)]="feedback.treatmentOutcomeRating"
+                />
+                <label for="treatmentOutcomeRating">4</label>
+              </li>
+              <li>
+                <input
+                  id="treatmentOutcomeRating"
+                  type="radio"
+                  name="treatmentOutcomeRating"
+                  value="5"
+                  [(ngModel)]="feedback.treatmentOutcomeRating"
+                />
+                <label for="treatmentOutcomeRating">5</label>
+              </li>
+            </ul>
+            <label for="referthisdoctorRating"
+              >3. Would you refer this doctor to others?</label
+            >
+            <ul class="rating">
+              <li>
+                <input
+                  id="referthisdoctorRating"
+                  type="radio"
+                  name="referthisdoctorRating"
+                  value="1"
+                  [(ngModel)]="feedback.referthisdoctorRating"
+                />
+                <label for="referthisdoctorRating">1</label>
+              </li>
+              <li>
+                <input
+                  id="referthisdoctorRating"
+                  type="radio"
+                  name="referthisdoctorRating"
+                  value="2"
+                  [(ngModel)]="feedback.referthisdoctorRating"
+                />
+                <label for="referthisdoctorRating">2</label>
+              </li>
+              <li>
+                <input
+                  id="referthisdoctorRating"
+                  type="radio"
+                  name="referthisdoctorRating"
+                  value="3"
+                  [(ngModel)]="feedback.referthisdoctorRating"
+                />
+                <label for="referthisdoctorRating">3</label>
+              </li>
+              <li>
+                <input
+                  id="referthisdoctorRating"
+                  type="radio"
+                  name="referthisdoctorRating"
+                  value="4"
+                  [(ngModel)]="feedback.referthisdoctorRating"
+                />
+                <label for="referthisdoctorRating">4</label>
+              </li>
+              <li>
+                <input
+                  id="referthisdoctorRating"
+                  type="radio"
+                  name="referthisdoctorRating"
+                  value="5"
+                  [(ngModel)]="feedback.referthisdoctorRating"
+                />
+                <label for="referthisdoctorRating">5</label>
+              </li>
+            </ul>
+
+            <label for=" appointmentProcessRating"
+              >4.How satisfied are you with the process of booking
+              appointment?</label
+            >
+            <ul class="rating">
+              <li>
+                <input
+                  id=" appointmentProcessRating"
+                  type="radio"
+                  name=" appointmentProcessRating"
+                  value="1"
+                  [(ngModel)]="feedback.appointmentProcessRating"
+                />
+                <label for=" appointmentProcessRating">1</label>
+              </li>
+              <li>
+                <input
+                  id=" appointmentProcessRating"
+                  type="radio"
+                  name=" appointmentProcessRating"
+                  value="2"
+                  [(ngModel)]="feedback.appointmentProcessRating"
+                />
+                <label for=" appointmentProcessRating">2</label>
+              </li>
+              <li>
+                <input
+                  id=" appointmentProcessRating"
+                  type="radio"
+                  name=" appointmentProcessRating"
+                  value="3"
+                  [(ngModel)]="feedback.appointmentProcessRating"
+                />
+                <label for=" appointmentProcessRating">3</label>
+              </li>
+              <li>
+                <input
+                  id=" appointmentProcessRating"
+                  type="radio"
+                  name=" appointmentProcessRating"
+                  value="4"
+                  [(ngModel)]="feedback.appointmentProcessRating"
+                />
+                <label for=" appointmentProcessRating">4</label>
+              </li>
+              <li>
+                <input
+                  id=" appointmentProcessRating"
+                  type="radio"
+                  name=" appointmentProcessRating"
+                  value="5"
+                  [(ngModel)]="feedback.appointmentProcessRating"
+                />
+                <label for=" appointmentProcessRating">5</label>
+              </li>
+            </ul>
+
+            <label for="additionalComments">Additional Comments</label>
+            <textarea
+              class="form-control"
+              id="additionalComments"
+              name="additionalComments"
+              rows="3"
+              [(ngModel)]="feedback.additionalComments"
+            ></textarea>
+            <br />
+          </div>
+          <div class="form-group text-right">
+            <button
+              type="button"
+              class="btn btn-outline-dark"
+              data-dismiss="modal"
+            >
+              Cancel</button
+            >&nbsp;
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+
+

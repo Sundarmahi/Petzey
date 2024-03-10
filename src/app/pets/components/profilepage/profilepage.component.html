@@ -1,0 +1,465 @@
+<div>
+  <div class="container parent">
+    <div class="head">
+      <p>Account Details</p>
+      <p class="para">
+        Manage your team members and their account permissions here.
+      </p>
+      <button
+        type="button"
+        class="btn btn-danger edit float-right some-other-class"
+        id="button"
+        data-toggle="modal"
+        data-target="#exampleModal"
+        (click)="openForm()"
+      >
+        Edit
+      </button>
+    </div>
+    <hr />
+    <div class="container parentd">
+      <div class="card c">
+        <div class="card-body d-flex align-items-center">
+          <div class="me-4">
+            <img
+              src="assets/img/patient7.jpg"
+              alt="Profile Image"
+              class="rounded-circle"
+              style="width: 100px; height: 100px"
+            />
+          </div>
+          <div class="flex-grow-1">
+            <p class="card-text1">
+              Name :
+              <span class="card-text">{{ PetParent.petParentName }}</span>
+            </p>
+            <p class="card-text1">
+              Mobile: <span class="card-text">{{ PetParent.phoneNumber }}</span>
+            </p>
+            <p class="card-text1">
+              Location: <span class="card-text">{{ PetParent.address }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pet1">
+      <div class="head">
+        <p class="tit px-4 mt-4">Pet Details</p>
+        <p class="para px-4">Manage your pets here.</p>
+        <button
+          mat-raised-button
+          class="btn btn-danger float-right"
+          id="button"
+          data-toggle="modal"
+          data-target="#newpet"
+        >
+          + New Pet
+        </button>
+      </div>
+      <hr />
+      <div class="" style="gap: 16px">
+        <div
+          class="scroll-container d-flex justify-content-between"
+          style="overflow: auto; gap: 32px"
+        >
+          <div *ngFor="let items of getpetsbasedonparentid">
+            <div class="card" style="width: max-content">
+              <a
+                routerLink="/pets/viewpet"
+                [queryParams]="{
+                  petName: items.petName,
+                  age: items.age,
+                  bloodGroup: items.bloodGroup,
+                  dateOfBirth: items.dateOfBirth,
+                  gender: items.gender
+                }"
+              >
+                <div class="card-body d-flex align-items-center">
+                  <div class="me-4">
+                    <img
+                      src="assets/img/PetIcon.png"
+                      alt="Profile Image"
+                      class="rounded-circle"
+                      style="width: 100px; height: 100px"
+                    />
+                  </div>
+                  <div class="flex-grow-1 element">
+                    <p class="petp">{{ items.petName }}</p>
+                    <p class="petdob">
+                      {{ items.gender }},{{ items.age }} years
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <button
+                type="button"
+                class="btn btn-danger edit float-right some-other-class"
+                id="button"
+                data-toggle="modal"
+                data-target="#editpet"
+                (click)="updatefetch(items.petId)"
+              >
+                edit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade popup"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      *ngIf="showForm"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="page-title">Edit Profile</h4>
+            <br />
+          </div>
+          <div class="modal-body">
+            <div class="namegap">
+              <img
+                alt=""
+                src="assets/img/patient7.jpg"
+                class="rounded-circle"
+                style="width: 30%; height: 50%"
+              />
+
+              <span class="mx-4"
+                >Name:<input
+                  type="text"
+                  class="form-control"
+                  [(ngModel)]="putdata.petParentName"
+                  name="petParentName"
+              /></span>
+            </div>
+            <br />
+            <div class="gender">
+              <label class="gen-label">Gender:</label>
+              <input
+                type="radio"
+                id="male"
+                value="Mr"
+                [(ngModel)]="putdata.gender"
+                name="gender"
+              />
+              Mr
+              <input
+                type="radio"
+                id="female"
+                value="Mrs"
+                [(ngModel)]="putdata.gender"
+                name="gender"
+              />
+              Mrs
+            </div>
+            <br />
+            <div>
+              <label for="">Mobile:</label>
+              <input
+                type="number"
+                class="form-control"
+                [(ngModel)]="putdata.phoneNumber"
+                name="phoneNumber"
+              />
+            </div>
+            <br />
+            <div>
+              <label>Location</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                cols="30"
+                class="form-control"
+                [(ngModel)]="putdata.address"
+                name="address"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              (click)="closeForm()"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="updatdePetparent($event)"
+              data-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade popupforadd"
+      id="newpet"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="page-title">Add new Pet</h4>
+            <br />
+          </div>
+          <div class="len modal-body">
+            <div class="namegap">
+              <img
+                alt=""
+                src="assets/img/PetIcon.png"
+                class="rounded-circle"
+                style="width: 30%; height: 50%"
+              />
+              <span class="mx-4"
+                >Name:<input
+                  type="text"
+                  name="petName"
+                  [(ngModel)]="petinfo.petName"
+              /></span>
+            </div>
+            <br />
+            <div class="Species">
+              <label class="gen-label">Species:</label>
+              <input
+                type="radio"
+                id="dog"
+                value="Dog"
+                [(ngModel)]="petinfo.breed"
+                name="Species"
+              />
+              Dog
+              <input
+                type="radio"
+                id="cat"
+                value="Cat"
+                [(ngModel)]="petinfo.breed"
+                name="Species"
+              />
+              Cat
+            </div>
+
+           
+
+            <br />
+           
+            <div class="gender">
+              <label class="gen-label">Gender:</label>
+              <input
+                type="radio"
+                id="male"
+                value="Male"
+                [(ngModel)]="petinfo.gender"
+                name="gender"
+              />
+              Male
+              <input
+                type="radio"
+                id="Female"
+                value="Mrs"
+                [(ngModel)]="petinfo.gender"
+                name="gender"
+              />
+              Female
+            </div>
+
+            <br />
+            <div>
+              <label for="dateof"></label>dateofbirth
+              <label for="age" class="orm-control mx-5" style="left: 50px"
+                >Age</label
+              >
+              <br />
+              <input
+                type="date"
+                id="dateof"
+                [(ngModel)]="petinfo.dateOfBirth"
+              />
+              <input
+                type="number"
+                id="age"
+                class="f mx-2"
+                [(ngModel)]="petinfo.age"
+              />
+            </div>
+            <br />
+            <div class="form-control">
+              <label for="blood">Blood group</label>
+              <br />
+              <input type="text" id="blood" [(ngModel)]="petinfo.bloodGroup" />
+            </div>
+            <div class="form-control">
+              <label for="allergies">Allergies</label>
+              <br />
+              <input
+                type="text"
+                id="allergies"
+                [(ngModel)]="petinfo.allergies"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-danger"
+              type="submit"
+              (click)="addPet()"
+              data-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade popupforadd"
+      id="editpet"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="page-title">Edit Pet</h4>
+            <br />
+          </div>
+          <div class="len modal-body">
+            <div class="namegap">
+              <img
+                alt=""
+                src="assets/img/PetIcon.png"
+                class="rounded-circle"
+                style="width: 30%; height: 50%"
+              />
+              <span class="mx-4"
+                >Name:<input
+                  type="text"
+                  name="petName"
+                  [(ngModel)]="jdata.petName"
+              /></span>
+            </div>
+            <br />
+
+            <div>
+              <label for="">Species</label>
+              <br />
+              <label for="dog" class="mx-2">Dog:</label>
+              <input
+                type="radio"
+                id="dog"
+                name="petspce"
+                value="Dog"
+                [(ngModel)]="jdata.breed"
+              />
+
+              <label for="cat" class="mx-lg-3">Cat:</label>
+              <input
+                type="radio"
+                id="cat"
+                name="petspce"
+                value="Cat"
+                [(ngModel)]="jdata.breed"
+              />
+            </div>
+
+            <br />
+            <div>
+              <label for="">Gender</label>
+              <br />
+              <label for="male" class="mx-2">male:</label>
+              <input
+                type="radio"
+                id="male"
+                name="petGender"
+                value="Male"
+                [(ngModel)]="jdata.gender"
+              />
+
+              <label for="female" class="mx-2">female:</label>
+              <input
+                type="radio"
+                id="female"
+                name="petGender"
+                value="Female"
+                [(ngModel)]="jdata.gender"
+              />
+            </div>
+
+            <br />
+            <div>
+              <label for="dateof"></label>dateofbirth
+              <label for="age" class="orm-control mx-5" style="left: 50px"
+                >Age</label
+              >
+              <br />
+              <input
+                type="date"
+                id="dateof"
+                [(ngModel)]="petinfo.dateOfBirth"
+              />
+              <input
+                type="number"
+                id="age"
+                class="f mx-2"
+                [(ngModel)]="jdata.age"
+              />
+            </div>
+            <br />
+            <div class="form-control">
+              <label for="blood">Blood group</label>
+              <br />
+              <input type="text" id="blood" [(ngModel)]="jdata.bloodGroup" />
+            </div>
+            <div class="form-control">
+              <label for="allergies">Allergies</label>
+              <br />
+              <input type="text" id="allergies" [(ngModel)]="jdata.allergies" />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              class="btn btn-danger"
+              type="submit"
+              data-dismiss="modal"
+              (click)="updatdePet($event)"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,183 @@
+ <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/login"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                routerLink="/register"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" routerLink="/logout"
+                >Logout</a
+              >
+            </li>
+  
+            <!-- <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li> -->
+          </ul>
+          <!-- <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+  
+    
+  </div>
+  <!-- </nav> -->
+    
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="xyz">
+    <img src="../assets/images/fp.png" />
+  </div>
+  
+  <div class="container">
+      <div class="card" *ngIf="isNotRegistered">
+        <div class="card-header">
+          <h1>Register</h1>
+        </div>
+    
+        <div class="card-body">
+          <div class="row">
+            email:<input type="text" name="username" [(ngModel)]="userI.email" />
+            
+          </div>
+          <br>
+            <div class="row">
+              password:<input type="text"
+                name="password"
+                [(ngModel)]="userI.password"
+              />
+            </div>
+              <br>
+              <div class="row">
+              userName:<input type="text" name="username" #uname [(ngModel)]="user.name">
+            </div>
+            <br>
+            <div class="row">
+              <!-- role:<input type="text" name="role" #role [(ngModel)]="user.role"><br> -->
+              Role:<select name="Role" id="Role" #role [(ngModel)]="user.role">
+                <option value="" disabled selected>Select a role</option>
+                <option value="Vet">Vet</option>
+                <option value="PetOwner">PetOwner</option>
+              </select>
+            </div>
+            <div class="row"></div>
+            <br>
+            <!-- <button (click)="onsubmitdata()">submit</button> -->
+          <!-- <div class="card-footer"> -->
+            <div class="row">
+              <!-- <button (click)="onsubmitdata(uname.value,role.value)">submit</button> -->
+              <!-- <button (click)="signUp() ; onsubmitdata(uname.value,role.value)" class="btn btn-outline-success">
+                Register
+              </button> -->
+              <button (click)="signUp();" class="btn btn-outline-success">Sign Up</button>
+
+            </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    
+      <div class="card" *ngIf="isConfirm">
+        <div class="card-header">
+          <h1>Confirm Email</h1>
+        </div>
+    
+        <div class="card-body">
+          <div class="row">
+            Code:<input type="text" name="code" [(ngModel)]="userI.code" />
+          </div>
+          <div class="card-footer">
+            <!-- <form onclick="onsubmitdata(uname.value,role.value)">
+            </form> -->
+            <div class="row">
+              <form (ngSubmit) = "onsubmitdata()" #validateform name="input">
+                <input (click)="confirmSignUp()" name="role" type="submit" value="submit">
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  
+  <!-- <p>register works!</p>
+  emailId:<input type="text" name="email" #email [(ngModel)]="userI.email"><br>
+  Password:<input type="text" name="Password" [(ngModel)]="userI.password"><br>
+  userName:<input type="text" name="username" #uname [(ngModel)]="user.name"><br>
+  role:<input type="text" name="role" #role [(ngModel)]="user.role"><br>
+  <button (click)="onsubmitdata(uname.value,role.value)">submit</button>
+  <button (click)="signUp()" class="btn btn-outline-success">
+      Register
+    </button> -->
+  

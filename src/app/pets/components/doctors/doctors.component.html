@@ -1,0 +1,220 @@
+ 
+  
+  <hr style="width: 1200px; margin-left: 230px;">
+  
+  <div>
+    <div style="
+  
+    position: relative;
+  width: 400px;
+  height: 38px;
+  left: 295px;
+  top: 0px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  color: #475467;
+  margin-top: 20px;
+    
+    "> Highly RatedVets</div>
+  </div>
+  <br><br>
+  <hr style="width: 1200px; margin-left: 230px; top:-50px;">
+  
+  <div class="row row-cols-1 row-cols-md-4" style="margin: 16px;margin-top: 2%;margin-left: 230px;width: 1200px;position: relative;left: 60px; top:-40px;">
+    <div *ngFor="let items of highlyRatedVets" class="col">
+      <mat-card-content
+        routerLink="/pets/vetprofile"
+        (click)="togglebar()"
+        [queryParams]="{ name: items.vetName, url: items.url, number: items.mobileNo }"
+      >
+        <div class="card" style="margin-bottom: 16px">
+          <div class="card-body" style="padding: 16px">
+            <div
+            style="
+              color: #475467;
+              font-size: 16px;
+              font-family: Inter;
+              font-weight: 400;
+              word-wrap: break-word;
+              /* background-color: yellow; */
+             
+            "
+            >{{ items.rating }} <img src="../assets/star-icon-svg-11.jpg" alt="" height="20px" width="20px">   </div>
+            <div
+              style="
+                justify-content: flex-start;
+                align-items: center;
+                display: inline-flex;
+                gap: 16px;
+              "
+            >
+           
+              <img
+                style="width: 100px; height: 100px; border-radius: 9999px"
+                src="{{ items.url }}"
+              />
+              <div
+                style="
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+                  gap: 16px;
+                  display: inline-flex;
+                "
+              >
+                <div>
+                  <span
+                    style="
+                      color: #101828;
+                      font-size: 20px;
+                      font-family: Inter;
+                      font-weight: 600;
+                      word-wrap: break-word;
+                    "
+                    >{{ items.vetName }}<br /></span
+                  ><span
+                    style="
+                      color: #475467;
+                      font-size: 16px;
+                      font-family: Inter;
+                      font-weight: 400;
+                      word-wrap: break-word;
+                     
+                    "
+                    >{{ items.speciality }}      </span
+                  >
+                 
+                 
+                </div>
+             
+                <div
+                  style="
+                    color: #475467;
+                    font-size: 16px;
+                    font-family: Inter;
+                    font-weight: 400;
+                    word-wrap: break-word;
+                  "
+                >
+                  Mobile :
+                  <span
+                    style="
+                      font-size: 16px;
+                      font-family: Inter;
+                      font-weight: 600;
+                      color: #101828;
+                    "
+                    >+{{ items.mobileNo }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </div>
+  </div>
+  
+  <div>
+    <div style="
+    position: relative;
+  width: 186px;
+  height: 38px;
+  left: 295px;
+  top: -30px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  color: #475467;
+  margin-top: 20px;
+    "> All Pets </div>
+  </div>
+  <br><br>
+  <hr style="width: 1200px; margin-left: 230px;top:-70px;">
+  
+  <div class="row row-cols-1 row-cols-md-4" style="margin: 16px;margin-top: 2%;margin-left: 230px;width: 1200px;position: relative;left: 60px;top:-40px;">
+   
+    <div *ngFor="let items of AllVets" class="col">
+      <a
+        routerLink="/pets/vetprofile"
+        [queryParams]="{ name: items.name, url: items.url, number: items.number }"
+      >
+        <div class="card" style="margin-bottom: 16px">
+          <div class="card-body" style="padding: 16px">
+            <div
+              style="
+                justify-content: flex-start;
+                align-items: center;
+                display: inline-flex;
+                gap: 16px;
+              "
+            >
+              <img
+                style="width: 100px; height: 100px; border-radius: 9999px"
+                src="assets/Ellipse 1.svg"
+              />
+              <div
+                style="
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+                  gap: 16px;
+                  display: inline-flex;
+                "
+              >
+                <div>
+                  <span
+                    style="
+                      color: #101828;
+                      font-size: 20px;
+                      font-family: Inter;
+                      font-weight: 600;
+                      word-wrap: break-word;
+                    "
+                    >{{ items.vetName }}<br /></span
+                  ><span
+                    style="
+                      color: #475467;
+                      font-size: 16px;
+                      font-family: Inter;
+                      font-weight: 400;
+                      word-wrap: break-word;
+                    "
+                    >{{ items.speciality }}</span
+                  >
+                </div>
+                <div
+                  style="
+                    color: #475467;
+                    font-size: 16px;
+                    font-family: Inter;
+                    font-weight: 400;
+                    word-wrap: break-word;
+                  "
+                >
+                  Mobile :
+                  <span
+                    style="
+                      font-size: 16px;
+                      font-family: Inter;
+                      font-weight: 600;
+                      color: #101828;
+                    "
+                    >+{{ items.mobileNo }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div> 
+ 
+<router-outlet></router-outlet>
+  

@@ -1,0 +1,42 @@
+.profBox{
+    margin-left: 5%;
+    width: 1070px;
+    height: Fixed (415px);
+    top: 105px;
+    left: 308px;
+    padding: 32px;
+    gap: 51px
+ 
+}
+.hugg{
+    width: 100%;
+}
+
+.scroll-container {
+   
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  
+    &.hide-scrollbar {
+      overflow: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  
+    &.show-scroll {
+      overflow: auto;
+    }
+  
+    div {
+      white-space: nowrap;
+     
+      margin: .1rem;
+      padding: .2rem .7rem;
+      &:hover {
+        cursor: pointer;
+        border-color: #ccc;
+      }
+    }
+  }

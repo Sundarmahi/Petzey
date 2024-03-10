@@ -1,0 +1,177 @@
+<!-- <div class="container" id="container"> -->
+  <!-- <div class="form-container log-in-container">
+    <form action="#">
+      <h1>Login</h1>
+      <div class="social-container">
+        <a href="#" class="social"><i class="fa fa-facebook fa-2x"></i></a>
+        <a href="#" class="social"><i class="fab fa fa-twitter fa-2x"></i></a>
+      </div>
+      <span>or use your account</span>
+      <input type="text" placeholder="Email" #email />
+      <input type="text" placeholder="Password" #pass />
+      <a href="#">Forgot your password?</a>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        (click)="checkform(email.value, pass.value)"
+      >
+        Log In
+      </button>
+    
+    </form>
+  </div> -->
+ 
+ 
+  <!-- <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-right">
+        <h1>PETZEY</h1>
+      </div>
+    </div>
+  </div> -->
+  <!-- </div> -->
+  <!-- <div class="profBox" style="border: 2px solid beige; border-radius: 10px; ">
+    <div class="hugg">
+        <div>
+            <h4>Account Details</h4>  <button class="btn btn-danger" style="margin-left: 95%;"> Edit </button>
+            <br>
+            <small style="color: #667085;">Manage your account details here. </small>
+        </div>
+    </div>
+    <hr style="height: 2px; width: 73%;">
+    <div class="hugg2 ">
+        <table class="table" style="width: 80%;">
+              <tr>
+                <td scope="col" style="width: 30%;"><img src="assets/images/Ellipse 1.svg"></td>
+                <td scope="col" style="width: 400px;">
+                    <div>
+                        Name&nbsp;&nbsp;:&nbsp;&nbsp;  <strong>Dr. John Doe </strong><br><br>
+                        NPI No&nbsp;&nbsp;: &nbsp;&nbsp; <strong>  659862111 </strong><br><br>
+                        Speciality&nbsp;&nbsp;  :  &nbsp;&nbsp;<strong>  NAVLE </strong><br><br>
+                    </div>
+                </td>
+                <td scope="col" style="width: 400px;">
+                    <div>
+                        Mobile&nbsp;&nbsp;:&nbsp;&nbsp;<strong> +41 2121344 </strong><br><br>
+                        Email&nbsp;&nbsp;: &nbsp;&nbsp; <strong>  Johndoe&#64;gmail.com </strong><br><br>
+                        Clinic&nbsp;&nbsp;  :  &nbsp;&nbsp;<strong style="word-wrap: break-word;">  St. John's Clinic, Utah US </strong><br><br>
+                    </div>
+                </td>
+              </tr>
+        </table>
+    </div>
+</div>
+ -->
+
+
+
+
+
+
+<!-- <div class="history" style="margin-left: 290px; margin-top: -900px;">
+    <div class="container">
+    <p class="typo">Appointment History</p>
+    <div style="margin-left: 50%;">
+    <input matInput [matDatepicker]="picker" style="width: 0%;align-items:end;">
+    
+    <mat-hint>MM/DD/YYYY</mat-hint>
+    
+    <mat-datepicker-toggle matIconSuffix [for]="picker"> <button  mat-icon-button>
+
+      <mat-icon class="datebutton">event</mat-icon>
+    </button></mat-datepicker-toggle>
+
+    <mat-datepicker #picker></mat-datepicker>
+  </div>
+  </div>
+
+ <div class="scrollable-card" style="overflow: auto">
+  
+  <div *ngFor="let pet of items,let i=index"   class="card " id="box" style="margin-bottom: 16px; background: #FFFFFF; box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06); border-radius: 8px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex; border:#FFFFFF">
+           
+    <div class="card-body" style="padding: 0px;">
+       
+              <div style="padding: 16px;">
+                <div style=" justify-content: flex-start; align-items: center; display: inline-flex; gap: 16px;">
+                  <img style="width: 100px; height: 100px; border-radius: 9999px" [src]="'./assets/images/p2.png'"/>
+                  <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start;gap: 16px; display: inline-flex">
+                    <div><span style="color: #101828; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">{{pet.petparent.petparentName}}<br/></span><span style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">status:{{pet.status}}</span></div>
+                    <div style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Pet: {{pet.pet.petName}}</div>
+                  </div>
+                </div>
+                <div style="margin-top: 32px;" class="d-flex justify-content-between">
+                  <div ><span style="color: #475467; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">{{pet.time}}<br/></span><span style="color: #475467; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">{{pet.date}}</span></div>
+                  <div style="padding: 0px 16px 16px 16px; gap: 32px;" class="d-flex justify-content-between">
+                   
+                      <img src="./assets/images/message.svg" style="width: 23.38px; height: 23.38px;" >
+         
+                      <img src="./assets/images/call.svg" style="width: 23.38px; height: 23.38px;">
+                   
+                      <img src="./assets/images/video.svg" style="width: 23.38px; height: 23.38px;">
+                   
+                  </div>
+            </div>
+              </div>
+         
+      <div class="card-footer" >
+        <div class=" d-flex justify-content-between" style="padding: 12px;">
+          <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word; text-decoration: none;">Details</a>
+          <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word;  text-decoration: none;" >Feedback</a>
+        </div>
+      
+      </div>
+      </div>
+  </div>
+  </div>
+</div> -->
+<div style="width: 950px ;margin-top: -950px; margin-left: 300px;">
+<div class="d-flex justify-content-between" style="margin: 30px; ">
+  <span style="font-size: 24px; font-weight: 500; font-family: inter; color: #101828;">Appointment History</span>
+  <input type="date" class="form-control" style="width: 144px;">
+
+</div>
+
+    <div class="scroll-container d-flex" style="overflow: auto">
+      <div  *ngFor = "let items of AllAppointments" >
+          <div class="card" id="box" style="margin-bottom: 16px; background: #FFFFFF; box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06); border-radius: 8px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex; border:#FFFFFF">
+         
+              <div class="card-body" style="padding: 0px;">    
+                        <div style="padding: 16px;">
+                          <div style=" justify-content: flex-start; align-items: center; display: inline-flex; gap: 16px;">
+                            <img style="width: 100px; height: 100px; border-radius: 9999px" src={{items.url}} />
+                            <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start;gap: 16px; display: inline-flex">
+                              <div><span style="color: #101828; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">{{items.name}}<br></span><span style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">{{items.title}}</span></div>
+                              <div style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Owner: {{items.pet}}</div>
+                            </div>
+                          </div>
+                          <div style="margin-top: 32px;" class="d-flex justify-content-between">
+                            <div ><span style="color: #475467; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">{{items.time}}<br></span><span style="color: #475467; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">{{items.date}}</span></div>
+                            <div style="padding: 0px 16px 16px 16px; gap: 32px;" class="d-flex justify-content-between">
+                              
+                               <img src="assets/images/message.svg" style="width: 23.38px; height: 23.38px;">
+                   
+                                <img src="assets/images/call.svg" style="width: 23.38px; height: 23.38px;">
+                              
+                                <img src="assets/images/vedio.svg" style="width: 23.38px; height: 23.38px;">
+                              
+                            </div>
+                      </div>
+                        </div>
+                    
+                <div class="card-footer">
+                  <div class=" d-flex justify-content-between" style="padding: 12px;">
+                    <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word; text-decoration: none;">Details</a>
+                    <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word;  text-decoration: none;" >Feedback</a>
+                  </div>
+                  
+                </div>
+              
+            
+      </div>
+      </div>
+  </div>
+  </div>
+</div>
+
+
+

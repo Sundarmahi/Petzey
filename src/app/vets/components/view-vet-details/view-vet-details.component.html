@@ -1,0 +1,35 @@
+<div class="profBox" style="border: 2px solid beige; border-radius: 10px;">
+    <div class="hugg">
+        <div>
+            <h4>Account Details</h4>
+            <br>
+            <small style="color: #667085;">Manage your account details here. </small>
+        </div>
+    </div>
+    <hr style="height: 2px; width: 73%;">
+    <div class="hugg2 ">
+        <table class="table" style="width: 80%;">
+            <tbody>
+              <tr>
+                <td style="width: 30%; background-color: antiquewhite;"><img src="assets/images/Ellipse 1.svg"></td>
+                <td style="width: 400px; background-color: antiquewhite;">
+                    <div>
+                        Name&nbsp;&nbsp;:&nbsp;&nbsp;  <strong>{{vet.vetName}}</strong><br><br>
+                        NPI No&nbsp;&nbsp;: &nbsp;&nbsp; <strong>  659862111 </strong><br><br>
+                        Speciality&nbsp;&nbsp;  :  &nbsp;&nbsp;<strong>  {{vet.speciality}} </strong><br><br>
+                    </div>
+                </td>
+                <td style="width: 400px; background-color: antiquewhite;">
+                    <div>
+                        Mobile&nbsp;&nbsp;:&nbsp;&nbsp;<strong> {{vet.mobileNo}} </strong><br><br>
+                        Email&nbsp;&nbsp;: &nbsp;&nbsp; <strong>  {{vet.email}} </strong><br><br>
+                        Clinic&nbsp;&nbsp;  :  &nbsp;&nbsp;<strong style="word-wrap: break-word; width: 200px;">  clinic, washington, USA </strong><br><br>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

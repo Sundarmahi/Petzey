@@ -1,0 +1,79 @@
+<div class="profBox" style="border: 2px solid beige; border-radius: 10px; ">
+    <div class="hugg">
+        <span style="font-size: 18px; font-weight: 600; font-family: inter; color: #101828;">Vet Deatils</span>
+    </div>
+    <hr style="height: 2px; width: 100%;">
+    <div class="hugg2  " style="background-color: #FFFFFF;">
+        <table class="table" style="width: 80%; ">
+              <tr>
+                <td scope="col" style="width: 30%;"><img src={{url}} style="height: 100px; width: 100px;"></td>
+                <td scope="col" style="width: 400px;">
+                    <div>
+                        Name&nbsp;&nbsp;:&nbsp;&nbsp;  <strong>{{name}} </strong><br><br>
+                        NPI No&nbsp;&nbsp;: &nbsp;&nbsp; <strong>  659862111 </strong><br><br>
+                        Speciality&nbsp;&nbsp;  :  &nbsp;&nbsp;<strong>  NAVLE </strong><br><br>
+                    </div>
+                </td>
+                <td scope="col" style="width: 400px;">
+                    <div>
+                        Mobile&nbsp;&nbsp;:&nbsp;&nbsp;<strong> {{number}} </strong><br><br>
+                        Email&nbsp;&nbsp;: &nbsp;&nbsp; <strong>  {{name}}&#64;gmail.com </strong><br><br>
+                        Clinic&nbsp;&nbsp;  :  &nbsp;&nbsp;<strong style="word-wrap: break-word;">  St. John's Clinic, Utah US </strong><br><br>
+                    </div>
+                </td>
+              </tr>
+        </table>
+    </div>
+</div>
+
+<div style="gap: 100px;">
+    <div class="d-flex justify-content-between" style="margin: 30px;">
+        <span style="font-size: 24px; font-weight: 500; font-family: inter; color: #101828;">Appointment History</span>
+        <input type="date" class="form-control" style="width: 144px;">
+
+    </div>
+   
+          <div class="scroll-container d-flex" style="overflow: auto">
+            <div  *ngFor = "let items of AllAppointments" >
+                <div class="card" id="box" style="margin-bottom: 16px; background: #FFFFFF; box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06); border-radius: 8px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex; border:#FFFFFF">
+               
+                    <div class="card-body" style="padding: 0px;">    
+                              <div style="padding: 16px;">
+                                <div style=" justify-content: flex-start; align-items: center; display: inline-flex; gap: 16px;">
+                                  <img style="width: 100px; height: 100px; border-radius: 9999px" src={{items.url}} />
+                                  <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start;gap: 16px; display: inline-flex">
+                                    <div><span style="color: #101828; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">Dr. Jane Doe<br/></span><span style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">NAVLE</span></div>
+                                    <div style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Pet: Doggo</div>
+                                  </div>
+                                </div>
+                                <div style="margin-top: 32px;" class="d-flex justify-content-between">
+                                  <div ><span style="color: #475467; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">10:30<br/></span><span style="color: #475467; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">12/6/2020</span></div>
+                                  <div style="padding: 0px 16px 16px 16px; gap: 32px;" class="d-flex justify-content-between">
+                                    
+                                      <img src="./assets/message.svg" style="width: 23.38px; height: 23.38px;" >
+                         
+                                      <img src="./assets/call.svg" style="width: 23.38px; height: 23.38px;">
+                                    
+                                      <img src="./assets/vedio.svg" style="width: 23.38px; height: 23.38px;">
+                                    
+                                  </div>
+                            </div>
+                              </div>
+                          
+                      <div class="card-footer" style="">
+                        <div class=" d-flex justify-content-between" style="padding: 12px;">
+                          <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word; text-decoration: none;">Details</a>
+                          <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word;  text-decoration: none;" >Feedback</a>
+                        </div>
+                        
+                      </div>
+                    
+                  
+            </div>
+            </div>
+        </div>
+          </div>
+ 
+<router-outlet></router-outlet>
+
+

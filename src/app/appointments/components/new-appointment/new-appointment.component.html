@@ -1,0 +1,88 @@
+<app-header></app-header>
+<div id="page-container">
+  <p class="backbtn" id="heading" routerLink="/dashboard"> <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to
+    Appointments</p>
+  <h2 id="heading">New Appointment</h2>
+  <hr>
+  <div id="form-container">
+    <form id="appointment-form" #userForm="ngForm"  >
+      <div id="calendar">
+         <label for="">Appointment Date:</label>
+        <input type = "text" #refdate="ngModel" name="date" onfocus="(this.type='date')" required onblur="if(!this.value) this.type='text'"  ngModel [min]="  setMinDate()" >    
+          <div *ngIf="refdate.errors && (refdate.dirty || refdate.touched)" class="alert alert-danger">
+    <div [hidden]="!refdate.errors">
+  Please select the date.
+    </div>
+          </div>
+          <label for="">Veterinarian :</label>
+        <select name="vetname" id=""  (change)="getVetID($event)" ngModel >
+          <option *ngFor="let vet of vets"    [value]="vet.vetId">{{vet.vetName}}  --- {{vet.vetId}}  </option>
+        </select>
+      </div>
+      <br>
+      <label for="">Appointment Time:</label>
+      <div id="time-slot">
+ 
+        <button (click)="selectButton('09:00')" [ngClass]="{'selected': selectedButton === '09:00'}">09:00</button>
+        <button (click)="selectButton('09:30')" [ngClass]="{'selected': selectedButton === '09:30'}">09:30</button>
+        <button (click)="selectButton('10:00')" [ngClass]="{'selected': selectedButton === '10:00'}">10:00</button>
+        <button (click)="selectButton('10:30')" [ngClass]="{'selected': selectedButton === '10:30'}">10:30</button>
+        <button (click)="selectButton('11:00')" [ngClass]="{'selected': selectedButton === '11:00'}">11:00</button>
+        <button (click)="selectButton('11:30')" [ngClass]="{'selected': selectedButton === '11:30'}">11:30</button>
+        <br>
+        <button (click)="selectButton('12:00')" [ngClass]="{'selected': selectedButton === '12:00'}">12:00</button>
+        <button (click)="selectButton('12:30')" [ngClass]="{'selected': selectedButton === '12:30'}">12:30</button>
+        <button (click)="selectButton('01:00')" [ngClass]="{'selected': selectedButton === '01:00'}">01:00</button>
+        <button (click)="selectButton('01:30')" [ngClass]="{'selected': selectedButton === '01:30'}">01:30</button>
+        <button (click)="selectButton('02:00')" [ngClass]="{'selected': selectedButton === '02:00'}">02:00</button>
+        <button (click)="selectButton('02:30')" [ngClass]="{'selected': selectedButton === '02:30'}">02:30</button>
+        <br>
+        <button (click)="selectButton('03:00')" [ngClass]="{'selected': selectedButton === '03:00'}">03:00</button>
+        <button (click)="selectButton('03:30')" [ngClass]="{'selected': selectedButton === '03:30'}">03:30</button>
+        <button (click)="selectButton('04:00')" [ngClass]="{'selected': selectedButton === '04:00'}">04:00</button>
+        <button (click)="selectButton('04:30')" [ngClass]="{'selected': selectedButton === '04:30'}">04:30</button>
+        <button (click)="selectButton('05:00')" [ngClass]="{'selected': selectedButton === '05:00'}">05:00</button>
+        <button (click)="selectButton('05:30')" [ngClass]="{'selected': selectedButton === '05:30'}">05:30</button>
+      </div>
+      <div id="patient-details">
+        <h2>Patient Details</h2>
+        <label for="pet-name">Pet :</label>
+        <select name="" id=" " (change)="getPetID($event)">
+          <option *ngFor="let pet of pets"  [value]="pet.petId">{{pet.petName}}</option>
+        </select>
+        <h2>Other Details</h2>
+        <label for="pet-issues">Pet Issues</label>
+        <input type="text" id="pet-parent" name="pet-parent" required [(ngModel)]="newAppointment.pet_issues">
+        <label for="patient-condition">Reason for visit:</label>
+        <textarea id="patient-condition" name="patient-condition" required
+          [(ngModel)]="newAppointment.reasons_for_visit"></textarea>
+ 
+        <button type="reset" data-bs-toggle="modal" data-bs-target="#exampleModal" id="cancel-btn"> Reset</button>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" [disabled]="!userForm.form.valid" id="bookAppointment-btn">
+          BookAppointment</button>
+      </div>
+    </form>
+ 
+ 
+ 
+  </div>
+</div>
+ 
+ 
+<div class="modal fade popup" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h2>Book Appointment</h2>
+        <p>Do you want to book appointment?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-bs-dismiss="modal" id="cancel-btn">Cancel</button>
+        <button type="button" data-bs-dismiss="modal" id="bookAppointment-btn" (click)="onSumbitForm()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <router-outlet></router-outlet>

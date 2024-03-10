@@ -1,0 +1,202 @@
+.feedback-form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-form h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-form .rating,
+  .feedback-form .refer {
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form .stars {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .feedback-form .stars input[type="radio"] {
+    display: none;
+  }
+  
+  .feedback-form .stars label {
+    font-size: 2rem;
+    color: #ccc;
+    transition: color 0.2s;
+    cursor: pointer;
+  }
+  
+  .feedback-form .stars input[type="radio"]:checked~label {
+    color: #f00;
+  }
+  
+  .feedback-form textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .feedback-form .submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* .feedback-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-form button[type="submit"]:hover {
+    background-color: #d00;
+  } */
+  .modal-title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .feedback-form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: orange; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-form button[type="submit"]:hover {
+    background-color: #d00; 
+  }
+  
+  
+  .heading{
+    text-align: center;
+  }
+  .rating{
+    align-items: center;
+  }
+  .rating ul > li{
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .rating ul > li input{
+    margin-right: 10px;
+  }
+  
+  .ratings ul > li input, .ratings ul > li label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .feedback-form{
+    height: 685px;
+    width: 510px;
+    top: 234px;
+    left:835px;
+    border-radius: 12px;
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .feedback-form {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  /* .feedback-form.hidden {
+    display: none;
+  } */
+  
+  .modal fade{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+  }
+  
+  .popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin-top: 25%;
+    text-align: center; */
+  }
+  
+  #button {
+    position: absolute;
+    top: 75px;
+    right: 450px;
+  }
+  
+  /* Adjust modal size and position */
+  .modal-dialog {
+    max-width: 800px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+  }
+  
+  /* Adjust form styles */
+  ul.rating {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul.rating li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  /* Adjust modal header close button position */
+  .modal-header .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  
+  /* Adjust modal title alignment */
+  .modal-title {
+    text-align: center;
+  }
+  
+  .modal-dialog {
+    max-width: 450px;
+    margin: auto; /* Center horizontally */
+    margin-top: calc(50vh - 342.5px); /* Center vertically */
+  }
+  
+  

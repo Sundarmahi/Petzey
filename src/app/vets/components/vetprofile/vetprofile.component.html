@@ -1,0 +1,13 @@
+<div style="margin-left: 19%;"><button routerLink="/dashboard/allVets" (click)="getVet()">
+    &larr; Back to all vets
+</button>
+</div>
+<div style="margin-top: 1000px; margin-left: 7%;"> <app-view-vet-details></app-view-vet-details> 
+    <button class="btn btn-danger" routerLink="/dashboard/editVet" style="margin-left: 90%;">
+      Edit
+    </button>
+</div>
+<br>
+<div style="margin-top: 1000px; margin-left: 6%;"> <app-login></app-login> </div>
+
+<router-outlet></router-outlet>

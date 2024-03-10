@@ -1,0 +1,261 @@
+.overview {
+    position: absolute;
+    display: flex;
+    top: 97px;
+    left: 300px;
+    width: auto;
+    height: 164px;
+}
+
+.card {
+    box-shadow: 0px 1px 2px 0px #1018280F;
+    margin-left: 10px;
+    width: 340px;
+    height: 140px;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 16px;
+    box-shadow: 0px 1px 3px 0px #1018281A;
+    background-color: #ffffff;
+}
+
+.total {
+    width: 270px;
+    gap: 12px
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    width: Fill (246px);
+    height: Hug (48px);
+    gap: 8px;
+}
+
+.text {
+    padding-left: 20px;
+    width: 224px;
+    height: 24px;
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #101828;
+}
+
+.count {
+    padding-top: 10px;
+    font-family: 'Inter';
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.filterbar {
+    position: absolute;
+    width: 77%;
+    height: 44px;
+    top: 256px;
+    left: 308px;
+    border-bottom: 1px solid #D0D5DD;
+}
+
+.container {
+    width: 77%;
+    height: 50%;
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    top: 320px;
+    left: 308px;
+    gap: 40px 20px;
+}
+
+.displaycard {
+    width: 240px;
+    height: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 32px;
+    box-shadow: 0px 2px 4px -2px #1018280F;
+    box-shadow: 0px 4px 8px -2px #1018281A;
+}
+
+.info {
+    width: 100%;
+    height: 130px;
+    margin-bottom: 30px;
+}
+
+.bottomelements {
+    width: 100%;
+    height: 50px;
+    gap: 16px;
+}
+
+.details {
+    border-top: 0.1rem solid #D0D5DD;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.detailstext:hover {
+    font-weight: 600;
+}
+
+.detailstext {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #1D2939;
+}
+
+.cardimg {
+    width: 60px;
+}
+
+.cardupper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+.gender {
+    font-family: 'Inter';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #475467;
+}
+
+.name {
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.lowercard {
+    margin-top: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.owner {
+    font-family: 'Inter';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #475467;
+}
+
+.nameinfo {
+    width: 115px;
+    height: 42px;
+    padding-bottom: 4px;
+}
+
+.time {
+    font-family: 'Inter';
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.date {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    height: 18px;
+}
+
+.icons a {
+    margin: 0 5px;
+}
+
+.icons img {
+    width: 20px;
+    height: auto;
+}
+
+.allappointments {
+    font-family: 'Inter';
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #101828;
+}
+
+.pagination{
+    position: absolute;
+    text-align: center;
+    top: 790px;
+    left: 50%;
+}
+  
+  a{
+    text-decoration: none;
+  }
+  
+  p, li, a{
+    font-size: 14px;
+  }
+  
+  .pagination{
+    padding: 30px 0;
+  }
+  
+  .pagination ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .pagination a{
+    display: inline-block;
+    padding: 10px 18px;
+    color: #222;
+  }
+  
+  
+  .p5 a{
+    width: 30px;
+    height: 5px;
+    padding: 0;
+    margin: auto 5px;
+    background-color: #eeae95;
+  }
+  
+  .p5 .is-active{
+    background-color: #FF692E;
+  }
+  
+  

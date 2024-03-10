@@ -1,0 +1,160 @@
+img {
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  /* display: block; */
+  /* object-position: center top; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* object-fit: none; */
+  /* object-position: center top; */
+
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+padding: 0px;
+ 
+}
+/* #profile{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 1px;
+} */
+#profilephoto{
+width: 298px;
+height: 100px;
+gap:32px;
+display: grid !important;
+align-items: center;
+grid-template-columns: 1fr 1fr 1fr;
+column-gap: 1px;
+margin-bottom: 25px;
+}
+#doctordetails{
+display: grid;
+align-items: center;
+grid-template-columns: 1fr 1fr 1fr;
+column-gap: 1px;
+/* margin-bottom: 5px; */
+width: 455px;
+height: 71px;
+margin: 0px;
+
+}
+#details-left{
+width: 200px;
+height: 71px;
+gap: 8px;
+padding: 0px;
+}
+#details-right{
+width: 192px;
+height: 71px;
+gap: 8px;
+padding: 0px;
+}
+#details{
+width: 119px;
+height: 69px;
+gap: 8px;
+
+}
+#patient{
+height: 178px;
+width: 298px;
+gap: 32px;
+}
+#doctor{
+width: 450px;
+height: 260px;
+padding: 32px;
+border-radius: 8px;
+margin-left: 25px;
+box-shadow: 10px 10px 10px #1018281A;
+background-color: #fff;
+
+}
+#owner{
+height: 178px;
+width: 298px;
+gap: 32px;
+}
+#small-text {
+color: gray;
+font-weight:400;
+margin: 0px;
+padding-left: 10px;
+}
+
+#bold-text {
+font-weight: 600;
+color: #101828;
+font-size: 20px;
+margin: 0px;
+padding-left: 10px;
+}
+
+#grey-text {
+color: #344054;
+}
+#patientcard {
+width: 650px;
+height: 260px;
+padding: 32px;
+border-radius: 8px;
+/* display: flex; */
+/* flex-direction: column; */
+/* gap: 40px; */
+box-shadow: 10px 10px 10px #1018281A;
+background-color: #fff;
+
+
+}
+i{
+color: #9191A5;
+font-size: 18px;
+/* font-weight: 500; */
+padding-right: 10px !important;
+}
+#g-8{
+gap: q8px;
+}
+#g-16{
+gap: 26px !important;
+}
+p{
+margin-bottom: 0px;
+padding: 0px;
+size: 16px;
+font-weight: 600;
+font-family: 'Inter var', sans-serif;;
+}
+#container {
+display: flex;
+top: 348px;
+left: 311px;
+padding: 0px;
+margin: 0px;
+}
+/* #spacing{ */
+/* position: relative; */
+/* top: 348px !important; */
+/* left: 311px !important; */
+/* padding: 32px; */
+
+/* } */
+#dcolumn{
+  display: grid;
+align-items: center;
+grid-template-columns: 1fr 1fr 1fr;
+column-gap: 1px;
+}
+#icons{
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  border-radius: 0%;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}

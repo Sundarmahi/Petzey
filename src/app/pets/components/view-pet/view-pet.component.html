@@ -1,0 +1,101 @@
+<div class="d-flex justify-content-between" style="background-color: #FFFFFF;">
+  <div class="container d-flex" >
+    <div class="col  " style="padding: 16px;">
+      <div class=" d-flex" style="padding: 16px;">
+        
+          <img src="/assets/img/pet1.svg" width="100px"  height="100px" style="padding: 0px;"/>
+       
+        <div class="pet-info">
+          <div class="patient" style="padding-left:32px;">
+            <p class="text1">Patient</p>
+            <p class="text2">{{petname}}</p>
+            <p class="text1">{{gender}}, Afghan Hound</p>
+          </div>
+        </div>
+      </div>
+      <div class="patient-info">
+        <!-- <div *ngFor="let pet of parentData"> -->
+        <p class="text1">Gender  :  <span class="text2">{{gender}}</span></p>
+        <p class="text1">Age  :  <span class="text2">{{age}} years</span></p>
+        <p class="text1">Blood Group  :  <span class="text2"> {{bloodgroup}}</span></p>
+        <p class="text1">Date of Birth  :   <span class="text2">{{dateofbirth}}</span></p>
+        <!-- </div> -->
+      </div>
+      
+    </div>
+    
+    <div style="border: 1px solid gray; margin: 32px;"></div>
+    <div class="col-sm  d-flex justify-content-between" style="padding: 32px;">
+      <div class="card">
+        <div class="profile-pic " id="pic">
+          <div class="profile-pic-container d-flex ">
+            <img src="/assets/Ellipse 1.svg" id="output" width="100px" height="100px" />
+            <div class="parent"  style="padding: 26px;">
+                <p>Pet Owner</p>
+                <p><b>{{petparent.petParentName}}</b></p>
+            </div>
+          </div>
+        </div>
+        <div class="pet-owner">
+          
+        </div>
+          <div class="info" style="margin-top: 16px">
+            <p class="text"><i class="fa-regular fa-envelope"></i>  </p>
+            <p class="text"><i class="fa-solid fa-phone"></i> {{petparent.phoneNumber}}</p>
+            <p class="text"> <i class="fa-solid fa-house"></i> {{petparent.address}}</p>
+          </div>            
+        
+      </div>
+        <button class="book-appointment">Book Appointment</button>
+      
+    </div>
+
+
+  </div>
+</div>
+
+<!-- <div class="d-flex justify-content-between" style="margin: 30px;">
+  <span style="font-size: 24px; font-weight: 500; font-family: inter; color: #101828;">Appointment History</span>
+  <input type="date" class="form-control" style="width: 144px;">
+
+</div>
+
+<div class="scroll-container d-flex" style="overflow: auto">
+  <div  *ngFor = "let items of AllAppointments" >
+      <div class="card" id="box" style="margin: 16px; background: #FFFFFF; box-shadow: 0px 2px 4px -2px rgba(16, 24, 40, 0.06); border-radius: 8px; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex; border:#FFFFFF">
+     
+          <div class="card-body" style="padding: 0px;">    
+                    <div style="padding: 16px;">
+                      <div style=" justify-content: flex-start; align-items: center; display: inline-flex; gap: 16px;">
+                        <img style="width: 100px; height: 100px; border-radius: 9999px" src={{items.url}} />
+                        <div style="flex-direction: column; justify-content: flex-start; align-items: flex-start;gap: 16px; display: inline-flex">
+                          <div><span style="color: #101828; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">Dr. Jane Doe<br/></span><span style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">NAVLE</span></div>
+                          <div style="color: #475467; font-size: 16px; font-family: Inter; font-weight: 400; word-wrap: break-word">Pet: Doggo</div>
+                        </div>
+                      </div>
+                      <div style="margin-top: 32px;" class="d-flex justify-content-between">
+                        <div ><span style="color: #475467; font-size: 32px; font-family: Inter; font-weight: 600; word-wrap: break-word">10:30<br/></span><span style="color: #475467; font-size: 20px; font-family: Inter; font-weight: 600; word-wrap: break-word">12/6/2020</span></div>
+                        <div style="padding: 0px 16px 16px 16px; gap: 32px;" class="d-flex justify-content-between">
+                          
+                            <img src="./assets/message.svg" style="width: 23.38px; height: 23.38px;" >
+               
+                            <img src="./assets/call.svg" style="width: 23.38px; height: 23.38px;">
+                          
+                            <img src="./assets/vedio.svg" style="width: 23.38px; height: 23.38px;">
+                          
+                        </div>
+                  </div>
+                    </div>
+                
+            <div class="card-footer" style="">
+              <div class=" d-flex justify-content-between" style="padding: 12px;">
+                <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word; text-decoration: none;">Details</a>
+                <a href="#" style="text-align: center; color: #1D2939; font-size: 20px; font-family: Inter; font-weight: 500; word-wrap: break-word;  text-decoration: none;" >Feedback</a>
+              </div>
+              
+            </div>
+          
+        
+  </div>
+  </div>
+</div> -->

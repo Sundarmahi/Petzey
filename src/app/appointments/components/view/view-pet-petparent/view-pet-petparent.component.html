@@ -1,0 +1,70 @@
+<div id="spacing">
+  <div id="container">
+    <div id="card table" id="patientcard">
+      <div id="row" id="dcolumn">
+        <div id="column" id="patient">
+          <div id="row" id="profilephoto">
+            <div id="column" id="photo">
+              <img src="assets/images/pet.jpg" alt="Pet Profile Photo">
+            </div>
+            <div id="column" id="details">
+              <p id="small-text">Patient</p>
+              <p id="bold-text">{{pet.petName}}</p>
+              <p id="small-text">{{pet.petType}},{{pet.breed}}</p>
+            </div>
+          </div>
+          <div id="row">
+            <div id="column">
+              <p id="grey-text g-8"><span style="color: gray; font-weight:400;">Gender:</span>{{pet.gender}}</p>
+              <p id="grey-text g-8"><span
+                  style="color: gray; font-weight:400;">Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span> {{pet.age}}
+                years</p>
+            </div>
+          </div>
+        </div>
+        <div id="column" id="owner">
+          <div id="row" id="profilephoto">
+            <div id="column" id="photo">
+              <img style="background-color:#D1DFC3" src="assets/images/petParent.png" alt="Pet Owner Photo">
+            </div>
+            <div id="column" id="details">
+              <p id="small-text">Pet Owner</p>
+              <p id="bold-text">{{petParent.petParentName}}</p>
+            </div>
+          </div>
+          <div id="row">
+            <div id="column">
+              <p id="g-16"><img id="icons" src="../../../assets/images/envelope-regular.svg">{{petParent.petParentName}}</p>
+              <p id="g-16"><img id="icons" src="../../../assets/images/phone-solid.svg">{{petParent.phoneNumber}}</p>
+              <p id="g-16"><img id="icons" src="../../../assets/images/house-solid.svg">{{petParent.address}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="card table" id="doctor">
+      <div id="profile row" id="profilephoto">
+        <div id="profile-photo column" id="photo">
+          <img src="assets/images/vet.jpg" alt="Vet Profile Photo">
+        </div>
+        <div id="column" id="details">
+          <p id="small-text">Doctor</p>
+          <p id="bold-text">{{vet.vetName}}</p>
+          <p id="small-text">{{vet.speciality}}</p>
+        </div>
+      </div>
+      <div id="row" id="doctordetails">
+        <div id="column" id="details-left">
+          <p id="grey-text"><span style="color: gray; font-weight:400;">NPI No:</span> {{vet.vetId}}</p>
+          <p id="grey-text"><span style="color: gray; font-weight:400;">Clinic&nbsp;&nbsp;:</span> {{clinic.clinicName}},    
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{clinic.clinicLocation}}</p>
+        </div>
+        <div id="column" id="details-right">
+          <p id="email-icon"><img id="icons" src="../../../assets/images/envelope-regular.svg">{{vet.email}}</p>
+          <p id="phone-icon"><img id="icons" src="../../../assets/images/phone-solid.svg">{{vet.mobileNo}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,171 @@
+<div id="backToAppointment">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" top="70" fill="currentColor" class="bi bi-arrow-left"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+  </svg> <span id="text" routerLink="/dashboard/view-appointments" style="cursor:pointer">Back to appointments</span>
+</div>
+<div id="appointmentReport">
+  <div id="appointmentDetails">
+  
+    <span id="ID">#ID : {{appointment.appointmentId}} </span><br>
+    <span id="appointmentDate">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-calendar"
+        viewBox="0 0 16 16">
+        <path
+          d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+      </svg> {{appointment.appointmentDate}} ,
+    </span>
+    <span id="appointmentTime">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-clock"
+        viewBox="0 0 16 16">
+        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z" />
+        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0" />
+      </svg>
+      {{appointment.appointment_time}}
+    </span>
+  </div>
+  <br />
+  <div id="petIssues">Pet Issues : {{appointment.pet_issues}}</div>
+  <div id="reasonsToVisit">Reasons to visit : {{appointment.reasons_for_visit}} </div>
+  <!-- <span id="doctorName">Confirmed by {{doctorName}}</span> -->
+</div>
+<br />
+<div id="buttons">
+  <svg id="text" xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="#FF692E" class="bi bi-chat-right-text"
+    viewBox="0 0 16 16">
+    <path
+      d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" />
+    <path
+      d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
+  </svg>
+  <svg id="call" xmlns="http://www.w3.org/2000/svg" width="40" height="20" fill="#FF692E" class="bi bi-telephone"
+    viewBox="0 0 16 16">
+    <path
+      d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+  </svg>
+  <svg id="video" xmlns="http://www.w3.org/2000/svg" width="40" height="25" fill="#FF692E" class="bi bi-camera-video"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z" />
+  </svg>
+</div>
+
+<div class="editButtons">
+  <!-- <button type = "submit" class="btn btn-light" id = "cancel"> Cancel</button> -->
+  <button type="submit" class="btn btn-outline-dark edit float-right some-other-class" id="cancel" data-toggle="modal"
+    data-target="#exampleModal">Cancel</button>
+  <button type="submit" class="btn btn-outline-dark edit float-right some-other-class" id="edit" data-toggle="modal"
+    data-target="#exampleModal2">Edit</button>
+  <!-- <button type = "submit" id = "close">Close Appointment</button> -->
+  <button type="submit" class="btn btn-outline-dark edit float-right some-other-class" id="close" data-toggle="modal"
+    data-target="#exampleModal1">Close Appointment</button>
+
+</div>
+
+<div class="modal fade popup" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" style="z-index: 100px;" fill="red"
+          class="bi bi-exclamation-triangle" viewBox="0 0 26 26">
+          <path
+            d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z" />
+          <path
+            d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+        </svg>
+        <br>
+      </div>
+      <div class="modal-body">
+        <h4 class="page-title">Cancel Appointment</h4>
+        <p style="color:#808080">Do you want to cancel the appointment?</p>
+        <br>
+      </div>
+      <!-- Buttons -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="cancelSubmit()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade popup" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" style="z-index: 100px;" fill="red"
+          class="bi bi-exclamation-triangle" viewBox="0 0 26 26">
+          <path
+            d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z" />
+          <path
+            d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+        </svg>
+        <br>
+      </div>
+      <div class="modal-body">
+        <h4 class="page-title">Close Appointment</h4>
+        <p style="color:#808080">Do you want to close the appointment?</p>
+        <br>
+      </div>
+      <!-- Buttons -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="closeSubmit()">Confirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade popup" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Update Appointment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form #formData="ngForm" >
+          <div class="form-group">
+            <label for="appointmentDate">Appointment Date:</label>
+            <input type="date" id="appointmentdate" name="appointmentDate" class="form-control"
+              [(ngModel)]="appointment.appointmentDate" required>
+          </div>
+
+          <div class="form-group">
+            <label for="appointmentTime">Appointment Time:</label>
+            <input  type="time" id="appointmenttime" name="appointmentTime" style="position: relative; align-items: center;" class="form-control"
+              [(ngModel)]="appointment.appointment_time" required>
+          </div>
+
+          <div class="form-group">
+            <label for="petIssues">Pet Issues:</label>
+            <input type="text" id="petissues" name="petIssues" class="form-control" [(ngModel)]="appointment.pet_issues"
+              required>
+          </div>
+          <div class="form-group">
+            
+            <!-- <label for="veterinarian">Veterinarian:</label>
+            <select id="veterinarian" name="veterinarian" class="form-control" [(ngModel)]="doctorName" required>
+                <option *ngFor="let vet of vets"    [value]="vet.vetId">{{vet.vetName}}  --- {{vet.vetId}}  </option>
+            </select> -->
+            <!-- <select name="" id=""  (change)="">
+              <option *ngFor="let vet of vets"    [value]="vet.vetId">{{vet.vetName}}  --- {{vet.vetId}}  </option>
+            </select> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-danger" data-dismiss="modal" (click)="updateSubmit(formData.value)">Update</button>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+  </div>
+</div>

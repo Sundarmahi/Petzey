@@ -1,0 +1,141 @@
+/* .container {
+  
+  background-color: blue;
+ 
+  padding: 32px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+ 
+  box-shadow: 2px 2px 5px #ccc;
+  }
+ 
+  .patient-info, .pet-info, .allergies, .pet-owner {
+    margin-bottom: 10px;
+  }
+ 
+  .patient-info p, .pet-info p, .allergies p, .pet-owner p {
+    margin: 0;
+  }
+ 
+  .book-appointment {
+    display: block;
+  
+    padding: 10px;
+    background-color: #FC6736;
+    color: white;
+    border: none;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 12px;
+    top: 0;
+    right: 0;
+   
+   
+    margin-right: -180px;
+    margin-top: -10px;
+   
+  }
+  .card{
+    padding: 50px;
+    border: 0;
+    height: 80%;
+  }
+ 
+img{
+    clip-path: circle(50px);
+    left: 0;
+}
+ 
+.profile-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -20px;
+    object-fit: cover;
+  }
+ 
+  .profile-pic-container {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+  }
+ 
+  .profile-pic-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: -140px;
+  }
+ 
+  .profile-pic1 img{
+    margin-top: -40px;
+    margin-left: -50px;
+  }
+ 
+ 
+  #pic{
+    margin-top: -100px;
+  }
+ 
+  .patient{
+    margin-left: 150px;
+   
+    margin-bottom: 50px;
+  }
+ 
+.parent{
+    margin-left: 200px;
+   
+    margin-bottom: 100px;
+    margin-right: 50px;
+  }
+ 
+  .info{
+    margin-left: 50px;
+    
+  } */
+
+  .card {
+    border: none;
+  }
+  .text1 {
+    font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+  }
+
+.text2{
+  font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.text{
+  padding: 4px;
+  font-family: Inter;
+font-size: 16px;
+font-weight: 600;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+}
+.book-appointment{
+  height: 36px;
+  padding: 8px;
+  background-color: #FC6736;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+}

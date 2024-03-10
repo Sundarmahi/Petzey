@@ -1,0 +1,91 @@
+.prescriptions {
+    position: relative;
+    left:40px;
+    height: 190px;
+    width:450px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 10px;
+    gap: 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .card h3 {
+    margin-bottom: 50px;
+    width: 288px;
+    height: 28px;
+    bottom:20px;
+    top: 10px;
+  }
+  
+  .card div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .content{
+    position: relative;
+    Width:608px;
+    Height:656px;
+    Top:8px;
+    Left:0px;
+    border-radius:8px;
+    /* Padding:32px; */
+    Gap:32px;
+    /* margin-top: 60px; */
+    /* margin-left: 40px; */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.container-location{
+    position: relative;
+    left:-4px;
+    margin-left: 0px;
+    height: 120px;
+    width:450px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 80px;
+    gap: 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   .container2{
+    position: relative;
+    Width: 450px;
+    Height: 200px;
+    top: 35px;
+    Left: 40px;
+    border-radius: 8px;
+    background-color: #fff;
+    Padding: 32px;
+    Gap: 32px;
+    margin-top: 0px;
+    margin-left: 0px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app-text {
+  position: relative;
+  left:40px;
+}
+
+.pres-text {
+  position: relative;
+  left:40px;
+  font-weight: 600;
+  padding-bottom: 35px;
+}
+.image{
+  margin-top: -155px;
+  flex-direction: column;
+  margin-left: 320px;
+  position: relative;
+  left: -20px;
+  
+}
+.card-location h3 {
+  margin-bottom: 50px;
+  width: 288px;
+  height: 28px;
+  font-weight: 500;
+  
+}

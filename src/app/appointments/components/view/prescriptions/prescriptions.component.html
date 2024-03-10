@@ -1,0 +1,12 @@
+<h3 class = "pres-text" style="font-family: 'Inter var', sans-serif; font-weight:400">Prescription</h3>
+         
+<div class="prescriptions" *ngFor="let prescription of prescriptions">
+  <h3 style="font-family: 'Inter var', sans-serif;">{{ prescription.medicineName }}</h3> 
+  <p  style="font-family: 'Inter var', sans-serif;">Days of Consumption:{{ prescription.noOfDaysOfConsumption }}</p> 
+  <h5 style="font-family: 'Inter var', sans-serif; "> {{ prescription.consumptionSchedule }}</h5>
+  <p  style="font-family: 'Inter var', sans-serif;">Caution:{{ prescription.advice }}</p>
+  <br>
+</div>
+<!-- <div class="container2"> -->
+<app-view-recommended-clinics></app-view-recommended-clinics>
+<!-- </div> -->
